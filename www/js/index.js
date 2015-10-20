@@ -1,16 +1,30 @@
-var key = "phone";
-var value = "xperia";
-var key2 = "pen";
-var value2 = "black";
+var chocolatebar = {
+	"name": "Cadbury Fruit and Nut",
+	"per_100g": {
+		"energy(kJ)": "2100kJ",
+		"energy(Kcal)": "505Kcal",
+		"protein": "8.5g",
+		"carbohydrate": "55g",
+		"(of_which_sugar)": "54g",
+		"total_fat": "27.5g",
+		"(of_which_saturated_fat)": "15g",
+		"fibre": "1.3g",
+		"*equivalent_as_salt": "0.20g",
+		"allergen_information": {
+			"nuts": "yes",
+			"milk": "yes",
+			"wheat": "yes"
+		}
+	}
+}
 
-window.localStorage.setItem( key, value );
+console.log(
+	chocolatebar.name +
+	"has a fat content of" +
+	chocolatebar.per_100g.total_fat);
 
+var chocolatebarString = JSON.stringify(chocolatebar);
+window.localStorage.setItem("fruitandnut", chocolatebarString);
 
-var key = "phone";
-var value = window.localStorage.getItem(key);
-
-var key2 = "pen";
-var value2 = window.localStorage.getItem(key2);
-
-alert(value);
-alert(value2);
+var getChocolatebar = window.localStorage.getItem("fruitandnut");
+var chocolatebarJSON = JSON.parse(getChocolatebar);
