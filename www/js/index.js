@@ -11,18 +11,18 @@ var chocolatebar = {
 		"fibre": "1.3g",
 		"*equivalent_as_salt": "0.20g",
 		"allergen_information": {
-			"nuts": "yes",
-			"milk": "yes",
-			"wheat": "yes"
+			"nuts": "yes!",
+			"milk": "yes!",
+			"wheat": "yes!"
 		}
 	}
 }
 
 alert(
 	chocolatebar.name +
-	"has a fat content of" +
+	" has a fat content of " +
 	chocolatebar.per_100g.total_fat +
-	"per 100g, does it contain nuts?" +
+	" per 100g, does it contain nuts? " +
 	chocolatebar.per_100g.allergen_information.nuts);
 
 var chocolatebarString = JSON.stringify(chocolatebar);
