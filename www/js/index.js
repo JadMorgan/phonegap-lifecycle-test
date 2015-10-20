@@ -1,33 +1,59 @@
-var chocolatebar = {
-	"name": "Cadbury Fruit and Nut",
-	"per_100g": {
-		"energy(kJ)": "2100kJ",
-		"energy(Kcal)": "505Kcal",
-		"protein": "8.5g",
-		"carbohydrate": "55g",
-		"(of_which_sugar)": "54g",
-		"total_fat": "27.5g",
-		"(of_which_saturated_fat)": "15g",
-		"fibre": "1.3g",
-		"*equivalent_as_salt": "0.20g",
-		"allergen_information": {
-			"nuts": "yes!",
-			"milk": "yes!",
-			"wheat": "yes!"
+var chocolatebars = 
+[
+	{
+		"name": "Cadbury Fruit and Nut",
+		"per_100g": 
+		{
+			"energy(Kcal)": "505Kcal",
+			"total_fat": "27.5g",
+			"fibre": "1.3g",
+			"allergen_information": 
+			{
+				"nuts": "Contains",
+			}
+		}
+	},
+	{
+		"name": "Cadbury Dairy Milk",
+		"per_100g": 
+		{
+			"energy(Kcal)": "530Kcal",
+			"total_fat": "30.5g",
+			"fibre": "0.7g",
+			"allergen_information": 
+			{
+				"nuts": "May contain",
+			}
+		}
+	},
+	{
+		"name": "Cadbury caramel",
+		"per_100g": 
+		{
+			"energy(Kcal)": "480Kcal",
+			"total_fat": "23.5g",
+			"fibre": "0.4g",
+			"allergen_information": 
+			{
+				"nuts": "May contain",
+			}
 		}
 	}
-}
+];
 
+/*
 alert(
-	chocolatebar.name +
+	chocolatebars.name +
 	" has a fat content of " +
-	chocolatebar.per_100g.total_fat +
-	" per 100g, does it contain nuts? " +
-	chocolatebar.per_100g.allergen_information.nuts);
+	chocolatebars.per_100g.total_fat +
+	" per 100g, " +
+	chocolatebars.per_100g.allergen_information.nuts +
+	" nuts.");
+*/
 
-var chocolatebarString = JSON.stringify(chocolatebar);
-window.localStorage.setItem("fruitandnut", chocolatebarString);
+var chocolatebarsString = JSON.stringify(chocolatebars);
+window.localStorage.setItem("fruitandnut", chocolatebarsString);
 
-var getChocolatebar = window.localStorage.getItem("fruitandnut");
-var chocolatebarJSON = JSON.parse(getChocolatebar);
+var getChocolatebars = window.localStorage.getItem("fruitandnut");
+var chocolatebarsJSON = JSON.parse(getChocolatebars);
 
