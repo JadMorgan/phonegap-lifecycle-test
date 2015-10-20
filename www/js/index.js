@@ -21,10 +21,13 @@ var chocolatebar = {
 console.log(
 	chocolatebar.name +
 	"has a fat content of" +
-	chocolatebar.per_100g.total_fat);
+	chocolatebar.per_100g.total_fat +
+	"per 100g, does it contain nuts?" +
+	chocolatebar.per_100g.allergen_information.nuts);
 
 var chocolatebarString = JSON.stringify(chocolatebar);
 window.localStorage.setItem("fruitandnut", chocolatebarString);
 
 var getChocolatebar = window.localStorage.getItem("fruitandnut");
 var chocolatebarJSON = JSON.parse(getChocolatebar);
+
