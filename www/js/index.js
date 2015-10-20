@@ -18,7 +18,7 @@ var chocolatebar = {
 	}
 }
 
-console.log(
+alert(
 	chocolatebar.name +
 	"has a fat content of" +
 	chocolatebar.per_100g.total_fat +
